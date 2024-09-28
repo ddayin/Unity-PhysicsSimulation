@@ -11,7 +11,7 @@ public class GravityMoon : MonoBehaviour
         m_MoonGravity = -1.62f;
 
         m_Rigidbody = GetComponent<Rigidbody>();
-        m_Rigidbody.useGravity = true;
+        m_Rigidbody.useGravity = false;
 
         Physics.gravity = new Vector3(0f, m_MoonGravity, 0f);
     }

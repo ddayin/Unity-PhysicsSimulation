@@ -3,13 +3,11 @@ using UnityEngine;
 public class AddForceToCube : MonoBehaviour
 {
     public Rigidbody m_Rigidbody;
-    public float force = 10f;
+    public Vector3 m_Force = Vector3.zero;
 
     private void Awake()
     {
         m_Rigidbody = transform.GetComponent<Rigidbody>();
-
-        
     }
 
     private void Start()
@@ -20,6 +18,6 @@ public class AddForceToCube : MonoBehaviour
 
     public void Force()
     {
-        m_Rigidbody.AddForce(0, 0, force, ForceMode.Impulse);
+        m_Rigidbody.AddForce(m_Force, ForceMode.Impulse);
     }
 }
